@@ -1,0 +1,21 @@
+.start-component {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDE8E3;
+}
+
+button.start-button {
+    border: none;
+    border-radius: 8px;
+    background-color: #747475;
+    color: #EDE8E2;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    /* margin: 20px; */
+    box-sizing: border-box;
+    padding: 20px;
+    max-height: 60px;
+
+}
