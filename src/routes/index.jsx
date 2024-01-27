@@ -12,7 +12,7 @@ const router = createBrowserRouter([{
 }, {
     path: "",
     element: <EachPage />
-}])
+}], { basename: import.meta.env.DEV ? '/' : '/GeoTest/' })
 
 
 export default router 
