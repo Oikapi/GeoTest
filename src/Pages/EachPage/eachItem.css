@@ -213,7 +213,7 @@ button.next-button {
   margin: auto;
 }
 
-@media (max-width: 721px) {
+@media (max-width: 1081px) {
   .footer {
     height: 40vh;
     flex-direction: column-reverse;
