@@ -12,3 +12,12 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 421px) {
+    .dir-container {
+        box-sizing: border-box;
+        min-width: 100vw;
+        justify-content: flex-start;
+    }
+
+}

@@ -27,3 +27,14 @@
     max-width: 100%;
 
 }
+
+@media (max-width: 421px) {
+    .dir-item-container {
+        max-width: 300px;
+    }
+
+    .dir-item-img {
+        min-width: 200px;
+        min-height: 200px;
+    }
+}
