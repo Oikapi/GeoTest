@@ -1,5 +1,29 @@
 .dir-item-container {
-    /* max-width: 40%; */
+    width: 600px;
     display: flex;
     flex-direction: row;
+}
+
+.dir-item-text {
+    padding-left: 20px;
+    align-items: center;
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    display: flex;
+}
+
+.dir-item-img {
+    min-width: 250px;
+    min-height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.dir-item-img img {
+    max-width: 100%;
+
 }

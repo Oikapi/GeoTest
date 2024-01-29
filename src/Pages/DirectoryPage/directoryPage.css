@@ -1,5 +1,14 @@
 .dir-container {
     background-color: #EDE8E3;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
 }
