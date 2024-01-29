@@ -6,6 +6,8 @@ import router from './routes/index.jsx'
 import { Provider } from 'react-redux'
 import store from './store/index.js'
 
+console.log(import.meta.env.DEV)
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>

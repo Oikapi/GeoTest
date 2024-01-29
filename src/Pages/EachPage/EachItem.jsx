@@ -38,7 +38,7 @@ const EachItem = () => {
             <div className='header'>
                 <div className='naming'>ТЕСТ</div>
                 <button type="button" className="btn-close" onClick={() => navigate("/")}>
-                    <img src="/outline.svg" alt="" />
+                    <img src="./outline.svg" alt="" />
                     <span className="visually-hidden">Close</span>
                 </button>
             </div>

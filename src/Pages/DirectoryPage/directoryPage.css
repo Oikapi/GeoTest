@@ -1,0 +1,5 @@
+.dir-container {
+    background-color: #EDE8E3;
+    display: flex;
+    flex-direction: column;
+}

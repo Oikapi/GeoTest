@@ -14,6 +14,9 @@ const EachPage = () => {
                 <button className="start-button" onClick={() => navigate("/test")}>
                     НАЧАТЬ ТЕСТ
                 </button>
+                <button className="start-button" onClick={() => navigate("/directory")}>
+                    СПРАВОЧНИК
+                </button>
             </div>
         </div>
     )
