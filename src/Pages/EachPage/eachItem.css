@@ -242,8 +242,13 @@ button.next-button {
   }
 
   .btn-close {
-    /* width: 70px;
-    height: 70px; */
+    /* margin-right: auto; */
+    position: fixed;
+  }
+
+  .btn-close img {
+    /* margin-right: auto; */
+    margin-left: -50px;
   }
 
 }

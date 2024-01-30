@@ -36,5 +36,7 @@
     .dir-item-img {
         min-width: 200px;
         min-height: 200px;
+        margin-right: 0;
     }
+
 }
