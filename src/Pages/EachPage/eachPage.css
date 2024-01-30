@@ -19,3 +19,7 @@ button.start-button {
     max-height: 60px;
 
 }
+
+.process-bar img {
+    padding-left: 10px;
+}

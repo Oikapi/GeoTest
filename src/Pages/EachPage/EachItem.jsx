@@ -55,17 +55,17 @@ const EachItem = () => {
                 </div>
             </div >
             <div className='footer'>
-                <div className='process-bar'><ProgressBar variant="success" now={al / 60 * 100} /><p>{`${al} / 60`}</p></div>
+                <div className='process-bar'><ProgressBar variant="success" now={al / 60 * 100} /><p>{al}</p><img src="public/check-circle-fill.svg" alt="" /></div>
 
 
-
-                <button className="next-button" onClick={handleCheckAnswer}>
-                    ПРОВЕРИТЬ ОТВЕТ
-                </button>
                 <button className='next-button' onClick={() => {
                     dispatch(increaseAlDone())
                     changeInput("")
-                }}>ПРОПУСТИТЬ ВОПРОС</button>
+                }}>ПРОПУСТИТЬ</button>
+                <button className="next-button" onClick={handleCheckAnswer}>
+                    ПРОВЕРИТЬ ОТВЕТ
+                </button>
+
             </div>
         </>
     )

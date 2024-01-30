@@ -215,10 +215,13 @@ button.next-button {
 
 @media (max-width: 421px) {
   .footer {
+    gap: 15%;
+    justify-content: start;
     height: 40vh;
     flex-direction: column-reverse;
     padding: 0 20px;
     background-color: #EDE8E3;
+    padding-top: 8%;
   }
 
   .main-area {
@@ -228,13 +231,20 @@ button.next-button {
   button.next-button {
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
-    font-family: 800;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .progress {
     width: 300px;
     height: 30px;
     background-color: white;
+  }
+
+  .progress-bar {
+    padding-left: 10px;
   }
 
   .header {
@@ -251,4 +261,14 @@ button.next-button {
     /* margin-left: -50px; */
   }
 
+  .question p {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .photo-area {
+    width: 300px;
+    height: 300px;
+  }
 }
