@@ -10,14 +10,15 @@ const EachPage = () => {
     console.log(question)
     return (
         <div className='start-component'>
-            <div>
-                <button className="start-button" onClick={() => navigate("/test")}>
-                    НАЧАТЬ ТЕСТ
-                </button>
-                <button className="start-button" onClick={() => navigate("/directory")}>
-                    СПРАВОЧНИК
-                </button>
-            </div>
+            <button className="start-button" onClick={() => navigate("/test")}>
+                НАЧАТЬ ТЕСТ
+            </button>
+            <button className="start-button" onClick={() => navigate("/directory")}>
+                СПРАВОЧНИК
+            </button>
+            <button className="start-button" onClick={() => navigate("/cards")}>
+                КАРТОЧКИ
+            </button>
         </div>
     )
 }

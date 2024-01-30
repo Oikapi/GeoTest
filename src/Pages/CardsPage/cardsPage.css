@@ -1,0 +1,9 @@
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDE8E3;
+    height: 93vh;
+    flex-direction: column;
+    gap: 40px;
+}

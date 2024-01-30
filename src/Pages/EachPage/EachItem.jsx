@@ -55,7 +55,7 @@ const EachItem = () => {
                 </div>
             </div >
             <div className='footer'>
-                <div className='process-bar'><ProgressBar variant="success" now={al / 60 * 100} /><p>{al}</p><img src="public/check-circle-fill.svg" alt="" /></div>
+                <div className='process-bar'><ProgressBar variant="success" now={al / 60 * 100} /><p>{al}</p><img src="check-circle-fill.svg" alt="" /></div>
 
 
                 <button className='next-button' onClick={() => {
