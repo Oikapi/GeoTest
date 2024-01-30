@@ -179,7 +179,6 @@ button.next-button {
 }
 
 .answer {
-  padding-top: 10%;
   margin: 1%;
 }
 
@@ -269,5 +268,9 @@ button.next-button {
   .photo-area {
     width: 300px;
     height: 300px;
+  }
+
+  .answer {
+    padding-top: 10%;
   }
 }
