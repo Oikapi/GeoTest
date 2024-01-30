@@ -213,7 +213,7 @@ button.next-button {
   margin: auto;
 }
 
-@media (max-width: 1081px) {
+@media (max-width: 421px) {
   .footer {
     height: 40vh;
     flex-direction: column-reverse;
@@ -243,12 +243,12 @@ button.next-button {
 
   .btn-close {
     /* margin-right: auto; */
-    position: fixed;
+    position: static;
   }
 
   .btn-close img {
-    /* margin-right: auto; */
-    margin-left: -50px;
+    /* margin-left: auto; */
+    /* margin-left: -50px; */
   }
 
 }

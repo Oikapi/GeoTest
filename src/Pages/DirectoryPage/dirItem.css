@@ -30,13 +30,28 @@
 
 @media (max-width: 421px) {
     .dir-item-container {
-        max-width: 300px;
+        /* max-width: 300px; */
+        width: 100%;
     }
 
     .dir-item-img {
         min-width: 200px;
         min-height: 200px;
         margin-right: 0;
+    }
+
+    .dir-item-text {
+        width: 100%;
+        box-sizing: border-box;
+        /* word-wrap: break-word; */
+        hyphens: manual;
+    }
+
+    .dir-item-text span {
+        hyphens: auto;
+        word-wrap: break-word;
+        max-width: 100%;
+        font-size: 16px;
     }
 
 }
