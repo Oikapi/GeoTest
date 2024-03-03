@@ -4,6 +4,7 @@ body {
 
 
 .header {
+  height: 10vh;
   background-color: #EDE8E3;
   display: flex;
   justify-content: center;
@@ -98,9 +99,10 @@ body {
 }
 
 .main-area {
-  height: calc(100vh - 144px);
+
+  height: 80vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #EDE8E3;
@@ -198,16 +200,27 @@ button.next-button {
   margin-top: auto;
 }
 
+.process-bar-container {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  background-color: #EDE8E3;
+  padding-bottom: 50px;
+}
+
 .process-bar {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
   display: flex;
   flex-direction: row;
   padding-left: 13%;
 }
 
 .progress {
-  width: 240px;
-  height: 20px;
-  background-color: #EDE8E3;
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
 
 .process-bar p {
@@ -227,7 +240,9 @@ button.next-button {
   }
 
   .main-area {
-    height: calc(100vh - 44vh);
+    height: 80vh;
+    flex-direction: column;
+    justify-content: stretch;
   }
 
   button.next-button {
@@ -239,10 +254,15 @@ button.next-button {
     justify-content: center;
   }
 
-  .progress {
+  .process-bar {
+    border-radius: 10px;
+    display: flex;
     width: 300px;
     height: 30px;
     background-color: white;
+    padding-left: 0px;
+    flex-direction: row;
+    align-items: center;
   }
 
   .header {
@@ -266,6 +286,7 @@ button.next-button {
   }
 
   .photo-area {
+    margin-top: 90px;
     width: 300px;
     height: 300px;
   }

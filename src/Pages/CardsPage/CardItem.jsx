@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import "./cardItem.css"
 
-export default function CardItem({ question }) {
+export default function CardItem({ question, }) {
     const flashcard = question
     const [flip, setFlip] = useState(false)
     const [height, setHeight] = useState('initial')
@@ -21,7 +21,6 @@ export default function CardItem({ question }) {
         window.addEventListener('resize', setMaxHeight)
         return () => window.removeEventListener('resize', setMaxHeight)
     }, [])
-
     return (
         <div
             className={`card ${flip ? 'flip' : ''}`}
@@ -41,5 +40,6 @@ export default function CardItem({ question }) {
             </div>
             <div className="back" ref={backEl}>{flashcard.answer}</div>
         </div >
+
     )
 }
