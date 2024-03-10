@@ -1,5 +1,5 @@
 body {
-    background-image: url('public/background.jpg');
+    background-image: url("/GeoTest/background.jpg");
     /* Замените 'path/to/your/image.jpg' на путь к вашему изображению */
     background-size: cover;
     /* Растягивает изображение на весь экран */
