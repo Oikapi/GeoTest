@@ -3,7 +3,6 @@ import CardItem from "./CardItem"
 import "./cardsPage.css"
 import { increaseAlDone } from "../../store/questionsSlice"
 import { useNavigate } from "react-router"
-import SwiperWrappedCard from "../../components/SwiperWrappedCard"
 
 
 const CardsPage = () => {
@@ -21,7 +20,7 @@ const CardsPage = () => {
                 </button>
             </div>
             <div className="card-container">
-                <SwiperWrappedCard />
+                <CardItem question={questions[alreadyDone]} />
                 {/* <CardItem question={questions[alreadyDone]} /> */}
                 <button className="next-button absolute-button" onClick={() => dispatch(increaseAlDone())}>СЛЕДУЮЩИЙ</button>
             </div>

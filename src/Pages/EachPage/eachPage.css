@@ -1,9 +1,18 @@
+body {
+    background-image: url('/public\background.jpg');
+    /* Замените 'path/to/your/image.jpg' на путь к вашему изображению */
+    background-size: cover;
+    /* Растягивает изображение на весь экран */
+    background-position: center;
+    /* Выравнивает изображение по центру */
+}
+
 .start-component {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EDE8E3;
+    /* background-color: #EDE8E3; */
     flex-direction: column;
     gap: 20px;
 }

@@ -1,25 +1,15 @@
 .card-container {
-    padding-top: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EDE8E3;
+    /* background-color: #EDE8E3; */
     height: 90vh;
     flex-direction: column;
     gap: 40px;
 }
 
-.absolute-button {
-    position: absolute;
-    top: 66vh;
-    left: 45vw;
-
-}
 
 @media (max-width: 421px) {
-    .card-container {
-        padding-top: 90%;
-    }
 
     .absolute-button {
         position: relative;
