@@ -2,28 +2,38 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./eachItem.css"
 import { useSelector, useDispatch } from 'react-redux';
 import { ProgressBar } from 'react-bootstrap';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { increaseAlDone, setCompleted } from '../../store/questionsSlice';
 import { useNavigate } from 'react-router';
 import { AnswerButtons } from '../../components/AnswerButtons';
 const EachItem = () => {
-    // const [doneNum, increase] = useState(0);
     const navigate = useNavigate()
     const [glow, setGlow] = useState("none")
     const question = useSelector(state => state.questions)
-    const alreadyDone = useSelector(state => state.alreadyDone)
+    const totalCompleted = useSelector(state => state.totalCompleted)
     const dispatch = useDispatch()
+    const [currQuestion, setCurrQestion] = useState({ pic: "null" });
 
-    const handleCheckAnswer = useCallback((ans, aldo) => {
-        console.log(`Готово из ич${aldo}`)
-        console.log(ans)
-        console.log(question[aldo].answer)
-        if (ans === question[aldo].answer) {
+    const findNew = () => {
+        let randomNumber = 0;
+        do {
+            randomNumber = Math.floor(Math.random() * (question.length - 0 + 1)) + 0;
+        } while (question[randomNumber].completed == true);
+        setCurrQestion(question[randomNumber]);
+    }
+
+    useEffect(() => {
+        const randomNumber = Math.floor(Math.random() * (question.length - 0 + 1)) + 0;
+        setCurrQestion(question[randomNumber]);
+    }, [question])
+
+
+    const handleCheckAnswer = useCallback((ans, currqes) => {
+        if (ans === currqes.answer) {
             setGlow("green")
             setTimeout(() => {
-                // increase(prev => prev + 1)
-                // dispatch(setCompleted({ pic: question[alreadyDone].pic }))
-                dispatch(increaseAlDone())
+                dispatch(setCompleted(currqes));
+                findNew()
                 setGlow("none")
             }, 1000)
 
@@ -33,7 +43,6 @@ const EachItem = () => {
             setTimeout(() => {
                 setGlow("none")
             }, 1000)
-            console.log("неправильно")
         }
     }, [])
     return (
@@ -48,30 +57,16 @@ const EachItem = () => {
             <div className='main-area'>
                 <div className='question'>
                     <div className={glow === "none" ? "photo-area" : glow === "green" ? "photo-area glow-green" : "photo-area glow-red"}>
-                        <img src={`${question[alreadyDone].pic}`} alt="" />
+                        <img src={`${currQuestion.pic}`} alt="" />
                     </div>
                 </div>
-                <AnswerButtons clickHandler={handleCheckAnswer} id={alreadyDone} allQuestions={question} />
+                <AnswerButtons clickHandler={handleCheckAnswer} currQuestion={currQuestion} allQuestions={question} />
             </div >
             <div className='process-bar-container'>
                 <div className='process-bar'>
-                    <ProgressBar variant="success" now={alreadyDone / question.length * 100} /><p>{question.length}</p><img src="check-circle-fill.svg" alt="" />
+                    <ProgressBar variant="success" now={totalCompleted / question.length * 100} /><p>{totalCompleted}</p><img src="check-circle-fill.svg" alt="" />
                 </div>
             </div>
-            {/* <div className='answer'>
-                <input type="text" value={nowInInput} onChange={(e) => changeInput(e.target.value)} />
-            </div> */}
-            {/* <div className='footer'>
-                <div className='process-bar'><ProgressBar variant="success" now={al / 60 * 100} /><p>{al}</p><img src="check-circle-fill.svg" alt="" /></div>
-                <button className='next-button' onClick={() => {
-                    dispatch(increaseAlDone())
-                    changeInput("")
-                }}>ПРОПУСТИТЬ</button>
-                <button className="next-button" onClick={handleCheckAnswer}>
-                    ПРОВЕРИТЬ ОТВЕТ
-                </button>
-
-            </div> */}
         </>
     )
 }
