@@ -34,3 +34,18 @@ button.start-button {
 .process-bar img {
     padding-left: 5px;
 }
+
+.sign {
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 10px;
+    top: 70vh;
+    padding-right: 100px;
+    font-size: 18px;
+    color: #EDE8E2;
+    background-color: #747475;
+}
