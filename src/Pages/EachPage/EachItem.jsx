@@ -56,7 +56,7 @@ const EachItem = () => {
             </div>
             <div className='main-area'>
                 <div className='question'>
-                    <div className={glow === "none" ? "photo-area" : glow === "green" ? "photo-area glow-green" : "photo-area glow-red"}>
+                    <div className={glow === "none" ? "photo-area" : glow === "green" ? "photo-area glow-green" : "photo-area glow-red"} style={{ maxWidth: "100%" }}>
                         <img src={`${currQuestion.pic}`} alt="" />
                     </div>
                 </div>
