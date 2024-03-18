@@ -51,25 +51,30 @@ button.start-button {
 }
 
 .logo-container img {
-    width: 500px;
+    width: 350px;
 }
 
 .logo-container {
     position: absolute;
-    top: 10px;
-    top: -58px;
+    top: 9px;
     left: 10vw;
 }
 
 @media (max-width: 421px) {
     .logo-container {
-        position: absolute;
-        top: -34px;
-        left: -2vw;
+        position: unset;
+        display: flex;
+        /* position: relative; */
+        align-items: center;
+        justify-content: center;
     }
 
     .logo-container img {
-        width: 100%;
+        width: 70%;
+    }
+
+    .sign {
+        position: unset;
     }
 
 }

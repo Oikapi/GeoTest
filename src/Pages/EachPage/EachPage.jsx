@@ -11,6 +11,9 @@ const EachPage = () => {
     return (
         <>
             <div className='start-component'>
+                <div className='logo-container'>
+                    <img src='logo_png.png'></img>
+                </div>
                 <button className="start-button" onClick={() => navigate("/test")}>
                     НАЧАТЬ ТЕСТ
                 </button>
@@ -29,9 +32,7 @@ const EachPage = () => {
                         Васильев Даниил Евгеньевич<br />
                     </p>
                 </div>
-                <div className='logo-container'>
-                    <img src='logo.png'></img>
-                </div>
+
             </div>
 
         </>
