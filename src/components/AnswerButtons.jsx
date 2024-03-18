@@ -1,9 +1,7 @@
-import React, { memo, useEffect, useMemo } from 'react'
+import React, { memo } from 'react'
 import "./answerButton.css"
-import { useSelector } from 'react-redux'
 
-export const AnswerButtons = memo(({ clickHandler, currQuestion }) => {
-    const allQuestions = useSelector(state => state.questions)
+export const AnswerButtons = memo(({ clickHandler, currQuestion, allQuestions }) => {
     let answArr = []
     function whereRihtToGo() {
         let randomNumber;

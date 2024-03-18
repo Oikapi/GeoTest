@@ -1,12 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./eachItem.css"
+import "./testPage.css"
 import { useSelector, useDispatch } from 'react-redux';
 import { ProgressBar } from 'react-bootstrap';
 import { useCallback, useEffect, useState } from 'react';
-import { increaseAlDone, setCompleted } from '../../store/questionsSlice';
+import { setCompleted } from '../../store/questionsSlice';
 import { useNavigate } from 'react-router';
 import { AnswerButtons } from '../../components/AnswerButtons';
-const EachItem = () => {
+
+const TestPage = () => {
     const navigate = useNavigate()
     const [glow, setGlow] = useState("none")
     const question = useSelector(state => state.questions)
@@ -48,7 +49,7 @@ const EachItem = () => {
     return (
         <>
             <div className='header'>
-                <div className='naming'>ТЕСТ</div>
+                <div className='naming'>Тест</div>
                 <button type="button" className="btn-close" onClick={() => navigate("/")}>
                     <img src="./outline.svg" alt="" />
                     <span className="visually-hidden">Close</span>
@@ -72,4 +73,4 @@ const EachItem = () => {
 }
 
 
-export default EachItem
+export default TestPage

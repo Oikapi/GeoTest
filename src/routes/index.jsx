@@ -1,19 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../layouts/Layout";
-import EachPage from "../Pages/EachPage/EachPage";
-import EachItem from "../Pages/EachPage/EachItem";
 import DirectoryPage from "../Pages/DirectoryPage/DirectoryPage";
 import CardsPage from "../Pages/CardsPage/CardsPage";
+import MainPage from "../Pages/MainPage/MainPage";
+import TestPage from "../Pages/TestPage/TestPage";
 
 
 
 const router = createBrowserRouter([{
 
     path: "/test/",
-    element: <EachItem />
+    element: <TestPage />
 }, {
     path: "",
-    element: <EachPage />
+    element: <MainPage />
 },
 {
     path: "/directory",

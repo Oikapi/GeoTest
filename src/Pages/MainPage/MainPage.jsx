@@ -1,13 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./eachPage.css"
-import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router';
+import "./mainPage.css"
+import { useNavigate, } from 'react-router';
 
-const EachPage = () => {
+const MainPage = () => {
     const navigate = useNavigate()
-    const question = useSelector(state => state.questions)
-    const alreadyDone = useSelector(state => state.alreadyDone)
-    console.log(question)
     return (
         <>
             <div className='start-component'>
@@ -32,7 +27,6 @@ const EachPage = () => {
                         Васильев Даниил Евгеньевич<br />
                     </p>
                 </div>
-
             </div>
 
         </>
@@ -40,4 +34,4 @@ const EachPage = () => {
 }
 
 
-export default EachPage
+export default MainPage
