@@ -49,3 +49,27 @@ button.start-button {
     color: #EDE8E2;
     background-color: #747475;
 }
+
+.logo-container img {
+    width: 500px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    top: -58px;
+    left: 10vw;
+}
+
+@media (max-width: 421px) {
+    .logo-container {
+        position: absolute;
+        top: -34px;
+        left: -2vw;
+    }
+
+    .logo-container img {
+        width: 100%;
+    }
+
+}

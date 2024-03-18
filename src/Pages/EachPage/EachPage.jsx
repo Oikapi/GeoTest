@@ -29,6 +29,9 @@ const EachPage = () => {
                         Васильев Даниил Евгеньевич<br />
                     </p>
                 </div>
+                <div className='logo-container'>
+                    <img src='logo.png'></img>
+                </div>
             </div>
 
         </>
